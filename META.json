@@ -31,7 +31,9 @@
          }
       },
       "runtime" : {
-         "requires" : {}
+         "requires" : {
+            "Archive::Zip" : 0
+         }
       }
    },
    "release_status" : "stable",
@@ -40,5 +42,5 @@
          "url" : "http://github.com/dk/File-Redirect"
       }
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }
