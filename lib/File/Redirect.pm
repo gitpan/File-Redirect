@@ -4,7 +4,7 @@ use warnings;
 require DynaLoader;
 our @EXPORT_OK = qw(mount umount);
 our @ISA = qw(DynaLoader Exporter);
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 bootstrap File::Redirect $VERSION;
 
 use Errno;
@@ -185,6 +185,8 @@ The framework currently overrides only C<stat> and C<open> builtins, which is en
 for hacking into C<use> and C<require>. The framework though is capable of being extended
 to override other file- and dir- based operations, but that's probably is easier to
 do separately by overriding C<*CORE::GLOBAL::> functions.
+
+Warning: works only if perl's PERL_IMPLICIT_SYS is enabled
 
 =head1 API
 
